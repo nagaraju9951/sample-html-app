@@ -10,7 +10,8 @@ pipeline {
             steps {
                 // Checkout your code from version control
                 // Replace the repository URL with your own
-                checkout([$class: 'GitSCM', branches: [[name: '*/develop']], userRemoteConfigs: [[url: 'https://git.cloudavise.com/visops/t057/task-1.git']]])
+               checkout([$class: 'GitSCM', branches: [[name: '*/develop']], userRemoteConfigs: [[url: 'https://git.cloudavise.com/visops/t057/task-1.git']], credentialsId: 'ca-git-access'])
+
             }
         }
 
