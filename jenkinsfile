@@ -1,7 +1,7 @@
 pipeline {
     agent {
         node {
-            label 't057a-runner'
+            label 't057-runner'
         }
     }
     stages {
