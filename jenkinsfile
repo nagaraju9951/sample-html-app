@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
-                cleanWs
+                deleteDir()
                 git credentialsId: 'ca-git-access', branch: 'develop', url: 'https://git.cloudavise.com/visops/t057/task-1.git'
             }
         }
