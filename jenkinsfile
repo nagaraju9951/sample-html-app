@@ -14,7 +14,7 @@ pipeline {
         
         stage('Deploy Nginx') {
             steps {
-                sh 'ansible-playbook -i inventory deploy-nginx.yml'
+                sh 'ansible-playbook -i inventory deploy-nginx.yaml'
             }
         }
     }
