@@ -14,7 +14,7 @@
 
     - name: Copy index.html to Nginx document root
       copy:
-        src: /opt/jenkins/workspace/VisOps/t057/nginx-deploy   # Replace with the path to your local index.html file
+        src: /opt/jenkins/workspace/VisOps/t057/nginx-deploy/index.html   # Replace with the path to your local index.html file
         dest: /var/www/html/index.html
 
     - name: Set correct permissions for index.html
