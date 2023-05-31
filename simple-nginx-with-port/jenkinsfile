@@ -8,13 +8,13 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git credentialsId: 'ca-git-access', branch: 'develop', url: 'https://git.cloudavise.com/visops/t057/task-1.git'
+                git credentialsId: 'ca-git-access', branch: 'deploy-on-container', url: 'https://git.cloudavise.com/visops/t057/task-1.git'
             }
         }
         
         stage('Deploy Nginx') {
             steps {
-                sh 'ansible-playbook -i inventory deploy-nginx.yaml'
+                sh 'ansible-playbook -i inventory nginx-ansible.yaml'
             }
         }
     }
