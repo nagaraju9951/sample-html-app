@@ -1,4 +1,3 @@
-#deploy and installing code 
 - hosts: nginx
   become: yes
   tasks:

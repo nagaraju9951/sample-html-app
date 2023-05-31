@@ -4,13 +4,14 @@ pipeline {
             label 't057-runner'
         }
     }
+
     stages {
-        stage('Preparation') {
+        stage('checkout') {
             steps {
-                deleteDir()
                 git credentialsId: 'ca-git-access', branch: 'develop', url: 'https://git.cloudavise.com/visops/t057/task-1.git'
             }
         }
+        
         stage('Deploy Nginx') {
             steps {
                 sh 'ansible-playbook -i inventory deploy-nginx.yml'
