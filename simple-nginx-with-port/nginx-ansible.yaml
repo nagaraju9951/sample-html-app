@@ -5,12 +5,12 @@
   tasks:
     - name: Copy Dockerfile
       copy:
-        src: /home/nagaraju/project-day-1/simple-nginx-with-port/Dockerfile
-        dest: /home/ubuntu/Dockerfile
+        src: Dockerfile
+        dest: /home/ubuntu
 
     - name: Copy index.html
       copy:
-        src: /home/nagaraju/project-day-1/simple-nginx-with-port/index.html
+        src: index.html
         dest: /home/ubuntu
 
    
